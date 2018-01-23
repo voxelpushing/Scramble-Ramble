@@ -135,7 +135,8 @@ public class LeFinal {
 	public static void main(String[] args) {
 
 		int highscore = 0;
-
+        
+        // if highscore file is present, read the highscore
 		if (new File ("highscore.txt").isFile()){
 
 			String filename = "highscore.txt";
@@ -158,6 +159,7 @@ public class LeFinal {
 				System.exit(0);
 			}
 		}
+		// if highscore file not present, create file
 		else {
 			String filename = "highscore.txt";
 			try {
@@ -217,7 +219,8 @@ public class LeFinal {
 		String correctS = Integer.toString(correct);
 		String wrongS = Integer.toString(wrong);
 		String skippedS = Integer.toString(skipped);
-
+        
+        // update highscore if new highscore has been set
 		if (correct > highscore) {
 			String filename = "highscore.txt";
 			highscore = correct;
